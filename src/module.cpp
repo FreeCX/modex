@@ -26,7 +26,7 @@ void Module::scan(const std::string &folder) {
             }
             std::cout << " ... success" << std::endl;
 
-            void (*init)(Module *, uint32_t) = (void (*)(Module *, uint32_t)) dlsym(handle, "init");
+            void (*init)(Module *, uint32_t) = (void (*)(Module *, uint32_t)) dlsym(handle, "modex_plugin_init");
             char *error = dlerror();
             if (error != NULL) {
                 throw std::runtime_error(error);

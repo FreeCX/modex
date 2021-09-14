@@ -1,6 +1,6 @@
 #include "module.hpp"
 
-extern "C" void init(Module *mod, uint32_t index) {
+extern "C" void modex_plugin_init(Module *mod, uint32_t index) {
     mod->record("sum", index);
     mod->record("prod", index);
 }
