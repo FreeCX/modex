@@ -1,7 +1,7 @@
 #include "module.hpp"
 
 extern "C" void modex_plugin_init(Module *mod, uint32_t index) {
-    mod->record("demo", index);
+    mod->record("greetings", index);
 }
 
 extern "C" void greetings(Module *mod) {
